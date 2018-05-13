@@ -24,6 +24,9 @@ end
     end
 
     def validate_triangle
+      real
+
+      raise TriangleError if real_triangle.include?(false)
 end
 
   class TriangleError < StandardError
