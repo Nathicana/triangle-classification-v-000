@@ -9,8 +9,9 @@ class Triangle
   @side3 = side3
 end
   
-  def kind
-    
+  def kind(type)
+    return type.to_sym
+  end
  
  
 end
