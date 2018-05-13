@@ -8,18 +8,24 @@ class Triangle
   @side3 = side3
 end
 
-  def kind(type)
+  def kind
+    validate_triangle
+    
 
-    if type != equilateral|isosceles|scalene
-      begin
-      raise TriangleError
-    rescue TriangleError => error 
-      puts error.message
-    end 
-    else 
-      return type.to_sym
+    if side1 == side2 && side2 == side3
+      :equilateral
+    elsif 
+      side1 == side2 || side2 == side3| side1 == side3
+      :scalene
+    elsif 
+      side1 != side2 && side2 != side3 && side1 != side3
+      :isosceles
+      
     end
-end
+    end
+
+    def validate_triangle 
+      
 
   class TriangleError < StandardError
       # triangle error code
