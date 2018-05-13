@@ -24,7 +24,7 @@ end
     end
 
     def validate_triangle
-
+end
 
   class TriangleError < StandardError
       # triangle error code
