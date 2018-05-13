@@ -1,8 +1,4 @@
 class Triangle
-  
-  class TriangleError < StandardError
-      # triangle error code
-    end
 
   attr_accessor :side1, :side2, :side3
 
@@ -13,9 +9,16 @@ class Triangle
 end
 
   def kind(type)
-    return type.to_sym
-  end
-
-
+    
+    if equilateral != side1 = side2 = side3 
+      raise TriangleError 
+    else return type.to_sym
+    end
 end
 
+  class TriangleError < StandardError
+      # triangle error code
+    end
+
+    
+end
