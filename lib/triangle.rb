@@ -9,10 +9,15 @@ class Triangle
 end
 
   def kind(type)
-    
-    if equilateral != side1 = side2 = side3 
-      raise TriangleError 
-    else return type.to_sym
+
+    if type != equilateral|isosceles|scalene
+      begin
+      raise TriangleError
+    rescue TriangleError => error 
+      puts error.message
+    end 
+    else 
+      return type.to_sym
     end
 end
 
@@ -20,5 +25,5 @@ end
       # triangle error code
     end
 
-    
+
 end
